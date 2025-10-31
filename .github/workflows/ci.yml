@@ -1,0 +1,42 @@
+name: CI - Validasi Profil DevOps
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validasi:
+    name: Validasi Identitas & Struktur File
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Periksa keberadaan file devops-profile.html
+        run: |
+          if [ ! -f src/devops-profile.html ]; then
+            echo "Gagal: File 'src/devops-profile.html' tidak ditemukan!"
+            exit 1
+          fi
+          echo "File 'src/devops-profile.html' ditemukan."
+
+      - name: Validasi NIM dan Nama
+        env:
+          EXPECTED_NIM: "230411100005"
+          EXPECTED_NAME: "Hanin"
+        run: |
+          CONTENT=$(cat src/devops-profile.html)
+
+          if [[ "$CONTENT" != *"$EXPECTED_NIM"* ]]; then
+            echo "Gagal: NIM '$EXPECTED_NIM' tidak ditemukan di file HTML!"
+            exit 1
+          fi
+
+          if [[ "$CONTENT" != *"$EXPECTED_NAME"* ]]; then
+            echo "Gagal: Nama '$EXPECTED_NAME' tidak ditemukan di file HTML!"
+            exit 1
+          fi
+
+          echo "Validasi identitas: SUKSES."
