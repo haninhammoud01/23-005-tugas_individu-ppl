@@ -1,6 +1,6 @@
 # Tugas Individu 2 – PPL D
 
-Proyek ini mengimplementasikan **Continuous Integration (CI)** menggunakan **GitHub Actions** untuk memvalidasi identitas mahasiswa dalam aplikasi web statis bertema praktik DevOps global.
+This project implements **Continuous Integration (CI)** to validate student identity in a static web application, as part of the **Pengembangan Perangkat Lunak (PPL)** course at Universitas Trunojoyo Madura.
 
 ## 📌 Identitas
 
