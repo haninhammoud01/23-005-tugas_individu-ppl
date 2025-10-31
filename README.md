@@ -22,4 +22,4 @@ Proyek ini mengimplementasikan **Continuous Integration (CI)** menggunakan **Git
 - Memvalidasi keberadaan file `src/devops-profile.html`
 - Memastikan **NIM dan nama** muncul di dalam file HTML
 
-> 💡 Proyek ini dibuat sebagai bagian dari pembelajaran DevOps dasar di mata kuliah **Pengembangan Perangkat Lunak (PPL)**.
+> 💡 Proyek ini dibuat sebagai bagian dari pembelajaran DevOps dasar di mata kuliah **Pengembangan Perangkat Lunak (PPL)**
