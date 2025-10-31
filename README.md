@@ -1,4 +1,4 @@
-# Tugas Individu 2 – PPL D
+# Tugas Individu  – PPL D
 
 This project implements **Continuous Integration (CI)** to validate student identity in a static web application, as part of the **Pengembangan Perangkat Lunak (PPL)** course at Universitas Trunojoyo Madura.
 
